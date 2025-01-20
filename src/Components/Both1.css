@@ -1,0 +1,86 @@
+.containerr {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: space-evenly; /* Center horizontally */
+  gap: 20px; /* Space between the text and the image */
+  height: 70vh; /* Adjust height */
+  padding: 20px;
+  text-align: left; /* Center text inside */
+  margin: 50px auto; /* Center the container horizontally */
+  max-width: 1200px; /* Limit container width for larger screens */
+}
+
+.content {
+  flex: 1;
+  max-width: 400px; /* Limit the width of the text container */
+  color: #333;
+}
+
+.title {
+  font-size: 2rem ;
+  margin-bottom: 15px; /* Reduce spacing between heading and paragraph */
+}
+
+.description {
+  font-size: 1rem;
+  width: 100%;
+
+  margin-bottom: 20px;
+  margin-right: 100px;
+}
+
+.image-containerr {
+  flex: 1;
+  max-width: 400px; /* Limit the width of the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initially positioned below */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth animation */
+}
+
+.image-wrapper.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .containerr {
+    flex-direction: column-reverse; /* Reverse the order: image above text */
+    gap: 15px; /* Reduce spacing between elements */
+    height: auto; /* Adjust height for mobile */
+    padding: 50px;
+    margin: 20px auto; /* Reduce outer margin */
+  }
+  .content {
+    max-width: 100%; /* Allow text to take full width */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+
+  .image-containerr {
+    max-width: 100%; /* Allow the image to take full width */
+  }
+
+  .image-wrapper img {
+    border-radius: 15px; /* Slightly smaller rounded corners */
+  }
+}

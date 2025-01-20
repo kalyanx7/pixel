@@ -1,0 +1,61 @@
+.animated-text-container {
+  overflow: hidden; /* Prevent layout shifts */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.animated-text {
+  color: black;
+  font-size: 200px; /* Default font size for larger screens */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px) scale(0.8); /* Slide and scale */
+  transition: transform 1s ease-out, opacity 0.6s ease-in-out; /* Smooth animation */
+  margin: 0; /* Avoid extra space */
+  word-wrap: break-word; /* Ensure long words break to the next line */
+  line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+.animated-text.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0) scale(1); /* Move to original position */
+}
+
+.google-letter {
+  font-family: 'Playfair Display', serif;
+}
+
+.google-letter.blue {
+  color: blue;
+}
+
+.google-letter.red {
+  color: red;
+}
+
+.google-letter.yellow {
+  color: yellow;
+}
+
+.google-letter.green {
+  color: green;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 728px) {
+  .animated-text {
+    font-size: 130px; /* Increase font size for mobile */
+    transform: translateY(0px) scale(1); /* Remove translation */
+    margin-top: 20px;
+    white-space: normal; /* Allow text to wrap naturally */
+  }
+
+  .animated-text-container {
+    overflow: auto; /* Allow scrolling if content overflows */
+    text-align: center;
+    padding: 0px 0;
+  }
+
+  .whole {
+    width: 100%; /* Ensure the container spans full width */
+  }
+}

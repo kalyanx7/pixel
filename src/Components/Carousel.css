@@ -1,0 +1,78 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 80vh; /* Adjust the height to 70% of the viewport */
+    margin: 0;
+    overflow: hidden; /* Hide overflow to ensure smooth transition */
+  }
+  
+  /* Wrap the carousel images in a container for the sliding effect */
+  .carousel {
+    position: relative;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Fill container height */
+}
+
+  
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition */
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: center; /* Ensure image covers the container */
+    border-radius: 10px;
+  }
+  
+  buttons {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 2rem;
+    padding: 5px 15px;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  /* Hover Effect for the buttons */
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .carousel-container {
+      max-width: 100%;
+    }
+    .carousel {
+      height: auto;
+      margin-top: 0px;
+  }
+  .carousel-container {
+    height: 70%;
+
+}
+  }
+  

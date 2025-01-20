@@ -1,0 +1,85 @@
+.carousell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 900px;
+  width: 100%;  /* Ensure the container stretches across the screen */
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius:50px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: px;
+}
+
+.carousel-slide h2 {
+  font-size: 28px; /* Increased size */
+  margin-bottom: 10px;
+}
+
+.carousel-slide p {
+  font-size: 18px; /* Increased size */
+  color: #555;
+  margin-bottom: 20px;  /* Added margin for spacing */
+}
+
+.carousel-slide h3 {
+  font-size: 22px; /* Increased size */
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 32px; /* Larger button size */
+  cursor: pointer;
+  color: #555;
+  margin-left: 10px;
+}
+
+.carousel-button.left {
+  left: -100px;
+}
+
+.carousel-button.right {
+  right: -100px;
+}
+.carousel-button.left:hover, .carousel-button.right:hover {
+  background-color: #98710e7c; /* Set background color on hover */
+  color: #fff; /* Change text color on hover (optional) */
+  border-radius: 50px;
+  
+
+}
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;  /* Increased dot size */
+  height: 12px; /* Increased dot size */
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #555;
+}
+
