@@ -33,7 +33,12 @@ const AnimatedText = () => {
           ref={textRef}
           className={`animated-text ${isVisible ? 'visible' : ''}`}
         >
-          <span>The only phone engineered by </span>
+           <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+        `}
+      </style>
+          <span style={{ color: "black", fontSize: "100px", fontFamily: "Playwrite AU SA, sans-serif" }}>The only phone engineered by </span>
           <span className="google-letter blue">G</span>
           <span className="google-letter red">o</span>
           <span className="google-letter yellow">o</span>

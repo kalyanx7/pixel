@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Cards.css";
 
 const Cards = () => {
-  const [inView, setInView] = useState([false, false, false]); // Track if cards are in view
+  const [inView, setInView] = useState([]); // Track if cards are in view
   const cardsRef = useRef([]);
 
   const cards = [
@@ -59,24 +59,24 @@ const Cards = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
+        entries.forEach((entry) => {
+          const index = cardsRef.current.indexOf(entry.target);
+          if (entry.isIntersecting && index !== -1) {
             setInView((prevState) => {
               const newState = [...prevState];
-              newState[index] = true; // Mark card as in view
+              newState[index] = true;
               return newState;
             });
           }
         });
       },
-      { threshold: 0.9 } // Trigger when 50% of the card is in view
+      { threshold: 0.5 } // Trigger when 50% of the card is visible
     );
 
-    cardsRef.current.forEach((card) => observer.observe(card));
+    const currentRefs = cardsRef.current.filter(Boolean);
+    currentRefs.forEach((card) => observer.observe(card));
 
-    return () => {
-      if (observer) observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -86,9 +86,14 @@ const Cards = () => {
           className={`card ${inView[index] ? "show" : ""}`} // Add 'show' class when card is in view
           key={index}
           ref={(el) => (cardsRef.current[index] = el)} // Attach reference to each card
-          style={{ boxShadow: card.shadow }} // Apply unique shadow here
+          style={{ boxShadow: card.shadow }} // Apply unique shadow
         >
-          <img src={card.img} alt={card.title} className="card-image" />
+          <img
+            src={card.img}
+            alt={card.title}
+            className="card-image"
+            loading="lazy" // Optimize image loading
+          />
           <h3 className="card-title">{card.title}</h3>
           <div className="card-description">{card.description}</div>
         </div>
