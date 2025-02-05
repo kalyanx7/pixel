@@ -45,7 +45,7 @@
   .animated-text {
     font-size: 130px; /* Increase font size for mobile */
     transform: translateY(0px) scale(1); /* Remove translation */
-    margin-top: 20px;
+    margin-top: 10px;
     white-space: normal; /* Allow text to wrap naturally */
   }
 

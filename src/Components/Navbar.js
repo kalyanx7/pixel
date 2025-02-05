@@ -38,8 +38,8 @@ const Navbar = () => {
         <a href="/about" className="nav-link" onClick={closeMenu}>About</a>
         <a href="/services" className="nav-link" onClick={closeMenu}>Services</a>
         <a href="/#contact" className="nav-link" onClick={closeMenu}>Contact Us</a>
-        <a href="/SignUp" className="SignUpH" onClick={closeMenu}>Sign Up</a>
-        <a href="/login" className="loginH" onClick={closeMenu}>Login</a>
+        <a href="/SignUp" className="SignUp" onClick={closeMenu}>Sign Up</a>
+        <a href="/login" className="login" onClick={closeMenu}>Login</a>
       </nav>
     </div>
   );

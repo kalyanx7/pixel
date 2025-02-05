@@ -12,6 +12,9 @@ import Footer from './Components/footer';
 import CardSection from './Components/CardSection';
 import Contact from './Components/Contact';
 import Carousel1 from './Components/Carousel1';
+import Grid from './Components/Grid';
+
+
 
   
 const App = () => {
@@ -26,6 +29,7 @@ const App = () => {
       <Both1 />
       <Both2 />
        <CardSection /> 
+       <Grid />
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
@@ -36,9 +40,11 @@ const App = () => {
       </h1>
       <Video />
       <Carousel1 />
+      
      <Contact />
 
       <Footer />
+      
       
     </div>
   );

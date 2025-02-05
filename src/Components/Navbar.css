@@ -82,13 +82,13 @@ body {
   }
   
   /* Remove text decoration for all states */
-  .nav-link:hover, .SignUpH:hover, .loginH:hover,
-  .nav-link:focus, .SignUpH:focus, .loginH:focus,
-  .nav-link:active, .SignUpH:active, .loginH:active {
+  .nav-link:hover, .SignUp:hover, .login:hover,
+  .nav-link:focus, .SignUp:focus, .login:focus,
+  .nav-link:active, .SignUp:active, .login:active {
     text-decoration: none !important; /* Prevent underline on hover, focus, and active states */
   }
 
-  .nav-link:hover, .SignUpH:hover, .loginH:hover {
+  .nav-link:hover, .SignUp:hover, .login:hover {
     background: rgba(255, 254, 254, 0.2);
     transform: translateY(-3px);
   }
@@ -123,25 +123,27 @@ body {
   color: #000;
 }
 
-.SignUpH, .loginH {
+.SignUp, .login {
   color: #000000;
   font-size: 16px;
   padding: 6px 12px;
   border-radius: 20px;
   border: 1px solid #0f0000;
   transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
 
-.SignUpH:hover, .loginH:hover {
+.SignUp:hover, .login:hover {
   background: #000000;
   color: #ffffff;
   transform: scale(1.05);
 }
 
-.SignUpH {
+.SignUp{
   margin-right: 10px;
   color: #ffffff;
   background-color:#d4924b42;
+  text-decoration: none;
 }
 
 /* Responsive styles for larger screens */
