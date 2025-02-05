@@ -48,7 +48,7 @@
   transform: translateY(0); /* Move to original position */
 }
 
-.image-wrapper img {
+.imagee-wrapper img {
   max-width: 100%;
   height: auto;
   border-radius: 20px; /* Optional: Rounded corners */

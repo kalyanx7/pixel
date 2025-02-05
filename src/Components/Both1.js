@@ -39,7 +39,7 @@ function Both() {
       </div>
       <div className="image-containerr">
         <div
-          className={`image-wrapper ${isVisible ? "visible" : ""}`}
+          className={`imagee-wrapper ${isVisible ? "visible" : ""}`}
           ref={imgRef}
         >
           <img
